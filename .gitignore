@@ -1,0 +1,10 @@
+# 排除自动下载的数据集
+data/
+# 排除Python运行时生成的缓存文件
+__pycache__/
+*.pyc
+# 排除虚拟环境（如果创建了的话）
+venv/
+env/
+# 排除系统自动生成的文件
+Thumbs.db  # Windows系统
