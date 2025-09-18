@@ -102,7 +102,6 @@ plt.plot(range(1, num_epochs+1), test_accs, label="测试准确率", color='oran
 plt.xlabel("Epoch")
 plt.ylabel("准确率 (%)")
 plt.title("准确率曲线")
-plt.legend()
 plt.ylim(0, 100)
 plt.tight_layout()
 plt.show()
