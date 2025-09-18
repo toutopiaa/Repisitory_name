@@ -98,7 +98,6 @@ for epoch in range(num_epochs):
     print(f"最终测试准确率：{test_accs[-1]:.2f}%")
 
 plt.figure(figsize=(12, 4))
-plt.subplot(1, 2, 2)
 plt.plot(range(1, num_epochs+1), test_accs, label="测试准确率", color='orange')
 plt.xlabel("Epoch")
 plt.ylabel("准确率 (%)")
