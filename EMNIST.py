@@ -96,3 +96,12 @@ for epoch in range(num_epochs):
     test_losses.append(test_loss)    
     test_accs.append(test_acc)
     print(f"最终测试准确率：{test_accs[-1]:.2f}%")
+
+plt.figure(figsize=(12, 4))
+plt.plot(range(1, num_epochs+1), test_accs, label="测试准确率", color='orange')
+plt.xlabel("Epoch")
+plt.ylabel("准确率 (%)")
+plt.title("准确率曲线")
+plt.ylim(0, 100)
+plt.tight_layout()
+plt.show()
