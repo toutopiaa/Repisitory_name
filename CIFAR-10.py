@@ -111,7 +111,7 @@ class ResNet(nn.Module):
         return x
 
 def resnet18():
-    return ResNet(ResidualBlock, [2, 2, 2, 2])
+    return ResNet(ResidualBlock, [2, 2, 2, 2]) #2指blocks
 
 model = resnet18().to(device)
 criterion = nn.CrossEntropyLoss()
@@ -196,7 +196,7 @@ print(f'最佳测试准确率: {best_acc:.2f}%')
 
 checkpoint = torch.load('best_model.pth')
 model.load_state_dict(checkpoint['state_dict'])
-final_test_acc = test(checkpoint['epoch'] - 1)  # 减1是因为我们的epoch是从0开始的
+final_test_acc = test(checkpoint['epoch'] - 1)  # 减1是因为epoch是从0开始的
 print(f'最终测试准确率: {final_test_acc:.2f}%')
 
 class_correct = list(0. for i in range(10))
