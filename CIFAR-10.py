@@ -6,7 +6,6 @@ import torchvision
 import torchvision.transforms as transforms
 import numpy as np
 import time
-import os
 
 torch.manual_seed(486)
 np.random.seed(1096)
